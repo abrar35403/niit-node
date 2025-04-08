@@ -12,7 +12,8 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.static("uploads"));
 
-
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 // Test API
 app.get("/test", (req, res) => {
